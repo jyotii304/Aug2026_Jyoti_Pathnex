@@ -1,0 +1,129 @@
+# Day 02 - Linux Basics Practice
+
+## 1. Linux vs Windows
+
+Windows mostly works with GUI (Graphical User Interface), where we use mouse and click options.
+
+Linux mostly works with CLI (Command Line Interface), where we use commands to perform tasks.
+
+
+## 2. Linux Directory Navigation
+
+### 2.1 pwd Command
+
+pwd means Print Working Directory.
+
+It shows the current directory where we are working.
+
+Example:
+
+pwd
+
+
+### 2.2 cd Command
+
+cd means Change Directory.
+
+It is used to move inside a directory.
+
+Example:
+
+cd Documents
+
+
+### 2.3 cd ..
+
+Used to move one directory back (parent directory).
+
+Example:
+
+cd ..
+
+
+### 2.4 Moving Multiple Directories
+
+Two levels back:
+
+cd ../..
+
+Three levels back:
+
+cd ../../..
+
+Example:
+
+cd ../../Documents/2\ August
+
+
+## 3. ls and ll Commands
+
+ls shows files and directories.
+
+ll shows detailed information about files and directories.
+
+
+## 4. Current and Parent Directory
+
+. = Current directory
+
+.. = Parent directory
+
+
+## 5. Folder Name with Space
+
+Example:
+
+cd 2\ August
+
+
+## 6. Creating Files and Directories
+
+mkdir creates a new directory.
+
+Example:
+
+mkdir LinuxPractice
+
+touch creates a new file.
+
+Example:
+
+touch test.txt
+
+
+## 7. Linux File Permissions
+
+Check permissions using:
+
+ls -l
+
+Example:
+
+drwxr-xr-x folder1
+
+-rw-r--r-- file1.txt
+
+
+### 7.1 First Character
+
+d = Directory
+
+- = File
+
+
+### 7.2 Permission Structure
+
+rwx | r-x | r--
+
+User | Group | Others
+
+
+### 7.3 Permission Types
+
+r = Read
+
+w = Write
+
+x = Execute
+
+- = No Permission

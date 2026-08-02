@@ -1,0 +1,19 @@
+# What I did today
+
+- Learned Linux basics
+- Practiced pwd, cd, ls, ll commands
+- Navigation between directories
+- Creating files using touch
+- Understanding . and ..
+- Handling folder names with spaces
+- Checking file permission using ls -l
+- understanding user, Group and others permissions
+
+## Tomorrow's Task
+
+- Linux Permissions (r,w,x)
+- Users, Group, Others
+- chmod (Permissions change)
+-Ec2 Linux practice
+
+
