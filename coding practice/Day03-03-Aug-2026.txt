@@ -1,0 +1,47 @@
+### mkdir
+
+Today I learned about the `mkdir` command. It is used to create new directories in Linux. We can create one or multiple directories at the same time.
+
+### Relative Path & Absolute Path
+
+I learned the difference between Relative Path and Absolute Path. Relative Path depends on the current location, while Absolute Path always starts from the root directory (`/`).
+
+### rmdir & rm -r
+
+The `rmdir` command is used to remove empty directories. The `rm -r` command deletes a directory along with all its files and folders.
+
+### Hidden Files
+
+Files that start with a dot (`.`) are called hidden files. We can view them using the `ls -a` or `ls -la` command.
+
+### find
+
+The `find` command is used to search files and directories by name, type, or size. It is very useful when finding files on a Linux server.
+
+### Pipe (`|`)
+
+I learned that the pipe operator (`|`) passes the output of one command as the input to another command. It helps in filtering command output.
+
+### head & tail
+
+The `head` command displays the first few lines of a file, while the `tail` command displays the last few lines. `tail -f` is useful for monitoring log files in real time.
+
+### df -h
+
+The `df -h` command is used to check disk space, including total, used, and available storage on the system.
+
+### du -h
+
+The `du -h` command shows the size of files and directories. It helps identify which folders are using more disk space.
+
+### Inode
+
+Today I learned about inode. It stores file information like permissions, owner, and timestamps. Even if disk space is available, new files cannot be created if all inodes are used.
+
+### top
+
+The `top` command is used to monitor running processes, CPU usage, and memory usage in real time.
+
+### free -h
+
+The `free -h` command displays RAM and swap memory usage in a human-readable format.
