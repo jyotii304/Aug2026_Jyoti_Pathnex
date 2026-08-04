@@ -1,47 +1,71 @@
-### mkdir
+Day 03 — Ansible, Terraform & Kubernetes Basics
+🔹 Ansible — Install Apache and Start Service
+- name: Install and Start Apache
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install apache
+      yum:
+        name: httpd
+        state: present
 
-Today I learned about the `mkdir` command. It is used to create new directories in Linux. We can create one or multiple directories at the same time.
+    - name: Start apache
+      service:
+        name: httpd
+        state: started
+        enabled: yes
 
-### Relative Path & Absolute Path
 
-I learned the difference between Relative Path and Absolute Path. Relative Path depends on the current location, while Absolute Path always starts from the root directory (`/`).
+🔹 Terraform — EC2 Instance (t3.medium)
+provider "aws" {
+  region = "us-east-1"
+}
 
-### rmdir & rm -r
+resource "aws_instance" "PathnexEC2" {
+  ami           = "ami-0abcd1234abcd1234"
+  instance_type = "t3.medium"
+  tags = {
+    Name = "Pathnex-T3"
+  }
+}
+🔹 Kubernetes — Create a ReplicaSet with 3 Replicas
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: pathnex-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pathnex-app
+  template:
+    metadata:
+      labels:
+        app: pathnex-app
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          ports:
+            - containerPort: 80
+🔹 Shell Script — User Info
+#!/bin/bash
+echo "Current user: $(whoami)"
+echo "Current user groups: $(groups)"
 
-The `rmdir` command is used to remove empty directories. The `rm -r` command deletes a directory along with all its files and folders.
 
-### Hidden Files
+🔹 Docker
+# Docker File for Nginx Web Server
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
 
-Files that start with a dot (`.`) are called hidden files. We can view them using the `ls -a` or `ls -la` command.
+# HTML
+<h1>Hello Pathnex</h1>
 
-### find
+# Bash
+# Real Path
+/usr/share/nginx/html
 
-The `find` command is used to search files and directories by name, type, or size. It is very useful when finding files on a Linux server.
-
-### Pipe (`|`)
-
-I learned that the pipe operator (`|`) passes the output of one command as the input to another command. It helps in filtering command output.
-
-### head & tail
-
-The `head` command displays the first few lines of a file, while the `tail` command displays the last few lines. `tail -f` is useful for monitoring log files in real time.
-
-### df -h
-
-The `df -h` command is used to check disk space, including total, used, and available storage on the system.
-
-### du -h
-
-The `du -h` command shows the size of files and directories. It helps identify which folders are using more disk space.
-
-### Inode
-
-Today I learned about inode. It stores file information like permissions, owner, and timestamps. Even if disk space is available, new files cannot be created if all inodes are used.
-
-### top
-
-The `top` command is used to monitor running processes, CPU usage, and memory usage in real time.
-
-### free -h
-
-The `free -h` command displays RAM and swap memory usage in a human-readable format.
+# Bash
+docker build -t pathnex-nginx .
+docker run -d -p 80:80 pathnex-nginx
