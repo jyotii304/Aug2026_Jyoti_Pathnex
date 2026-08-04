@@ -1,129 +1,73 @@
-# Day 02 - Linux Basics Practice
-
-## 1. Linux vs Windows
-
-Windows mostly works with GUI (Graphical User Interface), where we use mouse and click options.
-
-Linux mostly works with CLI (Command Line Interface), where we use commands to perform tasks.
-
-
-## 2. Linux Directory Navigation
-
-### 2.1 pwd Command
-
-pwd means Print Working Directory.
-
-It shows the current directory where we are working.
-
-Example:
-
-pwd
-
-
-### 2.2 cd Command
-
-cd means Change Directory.
-
-It is used to move inside a directory.
-
-Example:
-
-cd Documents
-
-
-### 2.3 cd ..
-
-Used to move one directory back (parent directory).
-
-Example:
-
-cd ..
-
-
-### 2.4 Moving Multiple Directories
-
-Two levels back:
-
-cd ../..
-
-Three levels back:
-
-cd ../../..
-
-Example:
-
-cd ../../Documents/2\ August
-
-
-## 3. ls and ll Commands
-
-ls shows files and directories.
-
-ll shows detailed information about files and directories.
-
-
-## 4. Current and Parent Directory
-
-. = Current directory
-
-.. = Parent directory
-
-
-## 5. Folder Name with Space
-
-Example:
-
-cd 2\ August
-
-
-## 6. Creating Files and Directories
-
-mkdir creates a new directory.
-
-Example:
-
-mkdir LinuxPractice
-
-touch creates a new file.
-
-Example:
-
-touch test.txt
-
-
-## 7. Linux File Permissions
-
-Check permissions using:
-
-ls -l
-
-Example:
-
-drwxr-xr-x folder1
-
--rw-r--r-- file1.txt
-
-
-### 7.1 First Character
-
-d = Directory
-
-- = File
-
-
-### 7.2 Permission Structure
-
-rwx | r-x | r--
-
-User | Group | Others
-
-
-### 7.3 Permission Types
-
-r = Read
-
-w = Write
-
-x = Execute
-
-- = No Permission
+Day 02 — Services & Tags
+
+🔹 Ansible — Install & Enable Nginx
+- name: Install and start Nginx on Pathnex
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
+    - name: Enable nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+
+🔹 Terraform — EC2 with Tags (r5.2xlarge)
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "PathnexEC2" {
+  ami           = "ami-0abcd1234abcd1234"
+  instance_type = "r5.2xlarge"
+
+  tags = {
+    Name        = "Pathnex-Server"
+    Environment = "Training"
+    Owner       = "PathnexStudent"
+  }
+}
+
+
+# Kubernetes — Deployment with 2 Replicas
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pathnex-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pathnex-app
+  template:
+    metadata:
+      labels:
+        app: pathnex-app
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          ports:
+            - containerPort: 80
+
+
+🔹 Shell Script — Disk Usage
+#!/bin/bash
+df -h
+
+🔹 Docker
+# Docker Images & Containers
+docker pull ubuntu
+docker images
+docker ps -a
+
+# Docker File
+FROM ubuntu:22.04
+RUN apt update
+CMD ["echo", "Hello Pathnex"]
