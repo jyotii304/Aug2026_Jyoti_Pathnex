@@ -1,0 +1,5 @@
+What I did Today
+30 min - Revised Cloud Computing basics.
+2 hours - Learned AWS topics like Control Tower, Landing Zone, SCP, CloudTrail, CloudWatch, Route53, Lambda.
+1 hour - Practiced AWS concepts and revised notes.
+30 min - Practiced English speaking.
