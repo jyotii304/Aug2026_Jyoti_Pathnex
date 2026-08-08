@@ -1,0 +1,10 @@
+What I did Today
+30 min - Revised Cloud Computing basics.
+2 hours - Learned AWS topics like EC2, IAM, VPC, S3, AMI, and Cloud.
+1 hour - Practiced AWS concepts and revised notes.
+30 min - Practiced English speaking.
+Tomorrow's Tasks
+1 hour - Revise AWS topics.
+1 hour - Learn S3 Storage Classes and Data Retention.
+30 min - Practice Git.
+30-40 min - Practice English speaking.
