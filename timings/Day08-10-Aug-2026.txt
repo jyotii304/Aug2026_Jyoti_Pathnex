@@ -1,0 +1,7 @@
+**What I did Today**
+
+30 min - Revised AWS and Cloud Computing basics.
+2 hours - Learned AWS services like Redshift, DMS, Glue, EMR, Batch, and Elastic Beanstalk. and  Learned about EFS and the difference between EFS and NFS.
+30 min - Practiced AWS concepts and revised my notes.
+30 min - Practiced English speaking.
+30 min- github
