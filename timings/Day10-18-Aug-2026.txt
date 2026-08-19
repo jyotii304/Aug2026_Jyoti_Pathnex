@@ -1,0 +1,8 @@
+**What I did Today**
+
+2 hours - Learned AWS services like EFS, NFS, EBS, Redshift, DMS, CloudFront, Snowball, and Elastic Beanstalk.
+1 hour - Learned about AWS CodePipeline and its role in CI/CD.
+30 min - Practiced AWS concepts and revised my notes.
+30 min - Practiced English speaking.
+30 min - Practiced GitHub.
+
