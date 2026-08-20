@@ -1,0 +1,6 @@
+Day 11
+
+1 Hour – Learned AWS services like EFS, NFS, EBS, Redshift, DMS, CloudFront, Snowball, and Elastic Beanstalk.
+30 Minutes – Practiced AWS concepts and revised my notes.
+30 Minutes – Practiced English speaking to improve my communication skills.
+45 Minutes – Practiced GitHub and explored its basic usage.
