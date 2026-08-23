@@ -1,0 +1,13 @@
+What I did Today:
+
+
+
+45 minutes – Learned about EKS cluster creation and the EKS upgrade cycle, including Standard and Extended Support. 
+
+30 minutes – Learned about Auto Scaling Groups, worker nodes, and Node Groups. 
+
+30 minutes – Understood DaemonSets and Horizontal and Vertical Scaling. 
+
+30 minutes – Practiced the concepts of Minimum, Desired, and Maximum capacity. 
+
+30 minutes – Added my Day 13 files and pushed them to GitHub.

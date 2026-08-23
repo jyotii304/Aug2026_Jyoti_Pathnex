@@ -1,0 +1,6 @@
+What I did Today
+45 minutes – Learned how to create an EKS cluster using the AWS Console.
+30 minutes – Learned about Cluster IAM Role, Node IAM Role, and Managed Node Groups.
+30 minutes – Practiced configuring kubectl and fixed the Unauthorized error.
+30 minutes – Practiced the complete EKS setup and understood how the cluster and nodes work.
+15 minutes – Cleaned up the AWS resources and pushed my Day 14 code to GitHub.
