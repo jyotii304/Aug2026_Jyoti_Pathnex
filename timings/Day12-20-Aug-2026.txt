@@ -1,0 +1,5 @@
+30 min - Revised Cloud Computing basics.
+1 hour - Learned AWS topics like EC2, IAM, VPC, S3, AMI, and Cloud.
+30 min - Practiced English speaking.
+30 min - Installed Git, configured GitHub SSH authentication, cloned my GitHub repository, and practiced Git commands.
+45 min - Learned Kubernetes architecture, including Control Plane, Worker Nodes, etcd, Kubelet, Kube-proxy, and the kubectl request flow.
